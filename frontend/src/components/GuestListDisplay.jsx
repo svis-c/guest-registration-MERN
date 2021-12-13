@@ -6,7 +6,7 @@ const GuestListDisplay = ({ list, removeGuestListProp }) => {
     <Guest
       name={item.name}
       email={item.email}
-      age={item.age}
+      age={2021 - item.age}
       removeGuestItemProp={(e) => removeGuestListProp(item.id)}
       key={item.id}
     />
