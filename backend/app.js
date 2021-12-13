@@ -38,7 +38,6 @@ app.get('/api/guestlist', (req, res) => {
   GuestList.find({}).then((result) => res.json(result));
 });
 
-
 // - POST
 //adds new guest to guest list
 
@@ -50,10 +49,8 @@ app.post('/api/guestlist', (req, res) => {
 
   guest
     .save()
-    .then((result) => res.send({ message: 'Guest saved' }))
-    .catch((err) =>
-      res.send({ message: 'Guest not saved, please try again later' })
-    );
+    .then((result) => res.send(result))
+    .catch((err) => res.send(err));
 });
 
 //PUT
@@ -63,8 +60,8 @@ app.put('/api/guestlist/:id', (req, res) => {
 
   const updatedGuest = req.body;
   GuestList.findByIdAndUpdate(guestId, updatedGuest)
-    .then((result) => res.json({ message: 'Guest updated' }))
-    .catch((err) => res.json({ message: 'Guest not updated' }));
+    .then((result) => res.json(result))
+    .catch((err) => res.json(err));
 });
 
 //DELETE
@@ -72,8 +69,6 @@ app.put('/api/guestlist/:id', (req, res) => {
 app.delete('/api/guestlist/:id', (req, res) => {
   const guestId = req.params.id;
   GuestList.findByIdAndDelete(guestId)
-    .then((result) => res.json({ message: 'Guest deleted' }))
-    .catch((err) =>
-      res.send({ message: 'Guest not deleted, try again later' })
-    );
+    .then((result) => res.json(result))
+    .catch((err) => res.send(err));
 });
