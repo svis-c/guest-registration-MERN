@@ -24,6 +24,13 @@ input[type='submit'] {
   cursor: pointer;
 }
 
+form {
+  margin-left: 15%;
+}
+input[type='submit'] {
+  margin-left: 30%;
+}
+
 input[type='submit']:hover {
   background-color: rgba(14, 135, 34, 0.707);
 }
