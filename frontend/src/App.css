@@ -1,11 +1,18 @@
 * body {
+  background-image: linear-gradient(
+    rgba(148, 242, 187, 0.59),
+    rgba(255, 255, 0, 0.391)
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 250%;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-button {
+button,
+input[type='submit'] {
   text-align: center;
   font-size: 14px;
   color: #141212;
@@ -17,9 +24,25 @@ button {
   cursor: pointer;
 }
 
+input[type='submit']:hover {
+  background-color: rgba(14, 135, 34, 0.707);
+}
+
+button:hover {
+  background-color: rgba(220, 14, 14, 0.707);
+}
+
 .guest-list-single-line {
   display: flex;
   align-items: baseline;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.guest-list-single-line {
+  margin: -20px;
 }
 
 .guest-list-single-line button {
