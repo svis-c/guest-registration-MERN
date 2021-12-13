@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 const Guest = ({ name, email, age, removeGuestItemProp }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [value, setValue] = useState([name + ', ' + email + ', ' + age]);
+  const [value, setValue] = useState([name + ', ' + email + ', DOB: ' + age]);
   const [tempValue, setTempValue] = useState([
-    name + ', ' + email + ', ' + age,
+    name + ', ' + email + ', DOB: ' + age,
   ]);
 
   //this is to set edditing function for guest already in the list. Doubleclick allows to edit
